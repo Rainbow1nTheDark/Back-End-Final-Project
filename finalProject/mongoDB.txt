@@ -1,3 +1,0 @@
-UserName: abalandin
-Password: J3jB8LVRDTEFqTX
-URL: mongodb+srv://abalandin:J3jB8LVRDTEFqTX@web322.osbhv.mongodb.net/Web322?retryWrites=true&w=majority

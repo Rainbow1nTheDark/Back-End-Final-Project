@@ -1,0 +1,27 @@
+<!--/*
+Name: Alexander Balandin
+ID: 132145194
+DATA: 10/29/2020
+Heroku url: https://glacial-eyrie-05995.herokuapp.com/
+*/ -->
+{{#if data.isLogin}}
+{{#if data.reqData.isAdmin}}
+<div class="welcome2">
+    <p>Welcome back {{data.reqData.firstName}}!</p>
+    <p>You login as an Administrator</p>
+    <p><a href="/addRoom" class="button"> Now you can add rooms</a> </p>
+
+    <a href="/logout" class="button">Logout</a>
+</div>
+{{else}}
+<div class="welcome2">
+    <p>Welcome back {{data.reqData.firstName}}!</p>
+    <a href="/logout" class="button">Logout</a>
+    {{/if}}
+</div>
+{{else}}
+<div class="welcome">
+    <p>Thank you {{data.reqData.userName}} for registration!</p>
+    <a href="/logout">Logout</a>
+</div>
+{{/if}}

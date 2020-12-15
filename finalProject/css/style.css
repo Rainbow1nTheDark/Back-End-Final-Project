@@ -1,0 +1,224 @@
+/*
+Name: Alexander Balandin
+ID: 132145194
+DATA: 10/29/2020
+Heroku url: https://glacial-eyrie-05995.herokuapp.com/
+*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex; /*items display closer to each other*/
+  justify-content: space-around;
+  align-items: center; /* vertical center*/
+  min-height: 8vh;
+  background-color: #5d4954;
+  font-family: "Montserrat", sans-serif;
+}
+.logo {
+  color: #c8d6e5;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 15px;
+}
+.logo img {
+  margin-left: 30px;
+  width: 8%;
+}
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+/*get rid from black points*/
+.nav-links li {
+  list-style: none;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.nav-links li:hover {
+  background-color: #503f48;
+  list-style: none;
+}
+.nav-links a {
+  color: #c8d6e5;
+  text-decoration: none; /*get rid from underling*/
+  letter-spacing: 3px;
+  font-weight: 14px;
+}
+.burger div {
+  width: 27px;
+  height: 3px;
+  background-color: #c8d6e5;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+/*The burger button is only for small size screens*/
+.burger {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  html,
+  body {
+    position: relative;
+    overflow-x: hidden;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: #5d4954;
+    display: flex;
+    flex-direction: column; /*the text goes down*/
+    align-items: center; /*vertically centered*/
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in; /*add 0.5s delay to hide and show the block*/
+  }
+  .burger {
+    display: block; /*get the burger button back*/
+    cursor: pointer;
+  }
+  .nav-active {
+    transform: translateX(0%);
+  }
+  /*hide the menu to pop up slowly*/
+  .nav-links li {
+    opacity: 0;
+  }
+}
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(8px);
+  }
+}
+/*change the way the burger looks when pressed*/
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+/*footer*/
+.footer {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+
+  display: flex;
+  background-color: #5d4954;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  justify-content: space-around;
+  align-items: center;
+}
+.ft {
+  margin: 5px;
+}
+.content-wrap {
+  padding-bottom: 2.5rem;
+}
+.information {
+  padding-bottom: 2.5rem;
+}
+.ft li a {
+  color: #c8d6e5;
+}
+.ft li a:hover {
+  color: #b1bdca;
+}
+.ft p {
+  color: #c8d6e5;
+}
+.ft li {
+  list-style: none;
+}
+.ft a {
+  text-decoration: none;
+}
+.footer-links {
+  list-style: none;
+
+  margin: 5px;
+}
+.footer-links a {
+  color: #c8d6e5;
+  text-decoration: none;
+}
+.footer-links a:hover {
+  color: #b1bdca;
+  text-decoration: none;
+}
+
+.contactForm {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+input[type="text"],
+select,
+textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+input[type="submit"] {
+  background-color: rgb(105, 83, 95);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background-color: #4d3d45;
+}
+input[type="date"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.contactForm p {
+  float: left;
+}
+.bookedRoom {
+  margin: auto auto;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  margin-top: -100px;
+  margin-left: -100px;
+  margin-bottom: 30%;
+}

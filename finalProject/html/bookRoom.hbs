@@ -1,0 +1,34 @@
+<div class="container" style="width: 50%; float:left">
+    <img src="/{{data.hotel}}" class="card-img-top" alt={{hotel}}>
+</div>
+
+
+<div class="container">
+
+</div>
+
+<div>
+    <div class="contactForm">
+        <p>Private room in {{data.town}} hosted by Alexander Balandin</p>
+        <p>{{data.description}}</p>
+        <p>Price per night: {{data.price}}$</p>
+
+        <form action="/bookRoom/{{data.hotel}}" method="POST">
+            <div class="inout">
+                <label for="in">CHECK-IN</label>
+                <input type="date" name="checkin">
+                <label for="out">CHECK-OUT</label>
+                <input type="date" name="checkout">
+            </div>
+            <input type="submit" value="Calculate Amount">
+        </form>
+        {{#if isTotal}}
+        <p>Total: {{total}}$CAD for {{days}} nights</p>
+        {{/if}}
+        {{#if isCalculated}}
+        <form action="/bookedRoom/{{days}}" method="POST">
+            <input class="book" type="submit" value="Book">
+        </form>
+        {{/if}}
+    </div>
+</div>

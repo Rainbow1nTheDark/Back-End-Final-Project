@@ -1,0 +1,114 @@
+/*
+Name: Alexander Balandin
+ID: 132145194
+DATA: 10/29/2020
+Heroku url: https://glacial-eyrie-05995.herokuapp.com/
+*/
+.contactForm {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+input[type="text"] {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 12px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+input[type="submit"] {
+  background-color: rgb(105, 83, 95);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+input[type="submit"]:hover {
+  background-color: #4d3d45;
+}
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 12px; /* Bottom margin */
+}
+.welcomeMess {
+  margin-left: 20%;
+  padding-top: 50px;
+  padding-left: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+}
+.instr {
+  margin-left: 20%;
+  padding: 20px 50px 50px 50px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+}
+.my-feedback {
+  color: red;
+  position: relative;
+  width: auto;
+}
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+.footer2 {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+
+  display: flex;
+  background-color: #5d4954;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.welcome {
+  margin: auto auto;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  margin-top: -100px;
+  margin-left: -100px;
+  margin-bottom: 30%;
+}
+.welcome2 {
+  margin: auto auto;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  margin-top: -100px;
+  margin-left: -100px;
+  margin-bottom: 30%;
+}

@@ -1,0 +1,103 @@
+<!--/*
+Name: Alexander Balandin
+ID: 132145194
+DATA: 10/29/2020
+Heroku url: https://glacial-eyrie-05995.herokuapp.com/
+*/ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>AirC&C</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='roomListing.css'>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <script src='main.js'></script>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <img src="logo.png" alt="logo">
+      <h4>AirC&C</h4>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/">Home Page</a></li>
+      <li><a href="/roomListing">Room Listing page</a></li>
+      <li><a href="/registration">Sign in</a></li>
+      <li><a href="/login">Log in</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+  <div class="content-wrap">
+    {{!-- <ul class="rooms"> --}}
+    <div class="container">
+      <div class="row">
+        {{#if isAdmin}}
+        <p class="deals">Administrator's panel</p>
+        {{#each data}}
+        <div class="col-3">
+          <img src={{hotel}} alt="hotel">
+          <p>{{town}}</p>
+          <h6>{{description}}</h6>
+          <p>${{price}} CAD/night</p>
+          <p><i class="fa fa-star" aria-hidden="true"></i>{{rating}}-AirC&C</p>
+          <div class="buttons">
+            <form action="/removeRoom/{{hotel}}" method="POST">
+              <input type="submit" value="Delete">
+
+            </form>
+            <form action="/editRoom/{{hotel}}" method="GET">
+              <input type="submit" value="Edit">
+            </form>
+          </div>
+        </div>
+        {{/each}}
+        {{else}}
+        {{#each data}}
+        <div class="col-3">
+          <img src={{hotel}} alt="hotel">
+          <p>{{town}}</p>
+          <h6>{{description}}</h6>
+          <p>${{price}} CAD/night</p>
+          <p><i class="fa fa-star" aria-hidden="true"></i>{{rating}}-AirC&C</p>
+          <form action="/bookRoom/{{hotel}}" method="GET">
+            <input type="submit" value="Book">
+          </form>
+        </div>
+        {{/each}}
+        {{/if}}
+      </div>
+    </div>
+    {{!-- </ul> --}}
+  </div>
+  <div class="footer">
+    <div class="ft">
+      <p>&copy;Alexander Balandin 132145194</p>
+      <li><a href="https://www.facebook.com/" class="fa fa-facebook"></i></a></li>
+      <li><a href="https://twitter.com/" class="fa fa-twitter"></a></li>
+
+
+    </div>
+    <ul class="footer-links">
+      <li><a href="/">Home Page</a></li>
+      <li><a href="/roomListing">Room Listing page</a></li>
+      <li><a href="/registration">Sign in</a></li>
+      <li><a href="/login">Log in</a></li>
+    </ul>
+  </div>
+
+</body>
+
+</html>

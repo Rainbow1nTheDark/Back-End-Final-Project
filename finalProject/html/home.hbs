@@ -1,0 +1,106 @@
+<!--/*
+Name: Alexander Balandin
+ID: 132145194
+DATA: 10/29/2020
+Heroku url: https://glacial-eyrie-05995.herokuapp.com/
+*/ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>AirC&C</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="homePage.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <img src="logo.png" alt="logo">
+      <h4>AirC&C</h4>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/">Home Page</a></li>
+      <li><a href="/roomListing">Room Listing page</a></li>
+      <li><a href="/registration">Sign up</a></li>
+      <li><a href="/login">Log in</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+  <div class="content-wrap">
+    <div class="welcomeMess">
+      <p>Book unique places to</br> stay and things to do.</p>
+    </div>
+    <div class="contactForm">
+      <form action="/" method="POST">
+        <label for="where">WHERE</label>
+        <select name="where" id="where">
+
+          <option value="quebec">Quebec</option>
+          <option value="Montreal">Montreal</option>
+          <option value="Toronto">Toronto</option>
+          <option value="Calgary">Calgary</option>
+          <option value="Ottava">Ottava</option>
+        </select>
+        <div class="inout">
+          <label for="in">CHECK-IN</label>
+          <input type="date" name="checkin">
+          <label for="out">CHECK-OUT</label>
+          <input type="date" name="checkout">
+        </div>
+        <label for="guests" name="guests">GUESTS</label>
+        <select name="guests" id="guests">
+
+          <option value="guest1">1 guest</option>
+          <option value="guest2">2 guests</option>
+          <option value="guest3">3 guests</option>
+          <option value="guest4">4 guests</option>
+          <option value="guest5">5 guests</option>
+        </select>
+        <input type="submit" value="Search">
+      </form>
+    </div>
+    <div class="promotion">
+      <p>Weekly promotions</br>Suite rooms week!</p>
+      <img src="promo.jpg" alt="Weekly promotion">
+    </div>
+    <div class="information">
+      <p>Why choose us?</p>
+      <ul class="infoImg">
+        <li><img src="hotel2.jpg" alt="img"></a>
+          <p>We care</p>
+        </li>
+        <li><img src="hotel6.jpg" alt="img"></a>
+          <p class="stress">Leave your stress out there</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="ft">
+      <p>&copy;Alexander Balandin 132145194</p>
+      <li><a href="https://www.facebook.com/" class="fa fa-facebook"></i></a></li>
+      <li><a href="https://twitter.com/" class="fa fa-twitter"></a></li>
+
+
+    </div>
+    <ul class="footer-links">
+      <li><a href="/">Home Page</a></li>
+      <li><a href="/roomListing">Room Listing page</a></li>
+      <li><a href="/registration">Sign up</a></li>
+      <li><a href="/login">Log in</a></li>
+    </ul>
+  </div>
+</body>
+
+</html>

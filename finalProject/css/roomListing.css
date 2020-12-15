@@ -1,0 +1,56 @@
+/*
+Name: Alexander Balandin
+ID: 132145194
+DATA: 10/29/2020
+Heroku url: https://glacial-eyrie-05995.herokuapp.com/
+*/
+.col-3 img {
+  width: 98%;
+}
+.rooms div {
+  float: left;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.content-wrap {
+  margin-bottom: 130px;
+  margin-top: 80px;
+}
+.col-3 {
+  padding-bottom: 60px !important;
+}
+.btn {
+  background-color: rgb(105, 83, 95);
+  color: rgb(105, 83, 95);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.deals {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+.rooms h6 {
+  font-weight: bold;
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+}
+.rooms p {
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+}
+.rooms div {
+  padding-bottom: 45px;
+  padding-left: 10px;
+}
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+input[type="submit"] {
+  width: 85px !important;
+}

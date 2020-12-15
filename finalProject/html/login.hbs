@@ -1,0 +1,83 @@
+<!--/*
+Name: Alexander Balandin
+ID: 132145194
+DATA: 10/29/2020
+Heroku url: https://glacial-eyrie-05995.herokuapp.com/
+*/ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>AirC&C</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='login.css'>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src='main.js'></script>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <img src="logo.png" alt="logo">
+      <h4>AirC&C</h4>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/">Home Page</a></li>
+      <li><a href="/roomListing">Room Listing page</a></li>
+      <li><a href="/registration">Sign up</a></li>
+      <li><a href="/login">Log in</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+  <div class="content-wrap">
+    <p class="welcomeMess">Login page</p>
+    <p class="instr">Please fill in this form to login in your account</p>
+    <div class="contactForm">
+      <form method="POST" action="/login">
+
+        <label for="email"></label>
+        <input type="text" placeholder="Email" name="email">
+        {{#if data.errors.email}}
+
+        <p class="my-feedback"> <strong>Warning:</strong> {{data.errors.email}}</p>
+
+        {{/if}}
+        <label for="psw"></label>
+        <input type="password" placeholder="Enter Password" name="psw">
+        {{#if data.errors.password}}
+
+        <p class="my-feedback"><strong>Warning:</strong> {{data.errors.password}}</p>
+
+        {{/if}}
+        <input type="submit" value="Login">
+      </form>
+    </div>
+  </div>
+  </div>
+  <div class="footer">
+    <div class="ft">
+      <p>&copy;Alexander Balandin 132145194</p>
+      <li><a href="https://www.facebook.com/" class="fa fa-facebook"></i></a></li>
+      <li><a href="https://twitter.com/" class="fa fa-twitter"></a></li>
+
+
+    </div>
+    <ul class="footer-links">
+      <li><a href="/">Home Page</a></li>
+      <li><a href="/roomListing">Room Listing page</a></li>
+      <li><a href="/registration">Sign up</a></li>
+      <li><a href="/login">Log in</a></li>
+    </ul>
+  </div>
+
+</body>
+
+</html>
